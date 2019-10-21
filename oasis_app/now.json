@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "name": "oasis-app",
+    "builds": [
+      {
+        "src": "now_build_staticfiles.sh",
+        "use": "@now/static-build",
+        "config": {
+          "distDir": "staticfiles_build"
+        }
+      },
+      {
+        "src": "oasis_app/wsgi.py",
+        "use": "@ardnt/now-python-wsgi",
+        "config": {
+          "maxLambdaSize": "30mb"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "oasis_app/wsgi.py"
+      }
+    ]
+  }
