@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'notes',
+    'rest_auth.registration',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+
 ]
 
 MIDDLEWARE = [
@@ -126,6 +131,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
+SITE_ID = 1
 
 # restframework
 
@@ -134,5 +140,9 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ]
 }
