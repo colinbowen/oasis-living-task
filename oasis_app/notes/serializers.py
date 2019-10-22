@@ -9,10 +9,11 @@ class NoteSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'first_name', 'last_name', 'email')
+        fields = ('id', 'url', 'first_name', 'last_name', 'email')
 
 
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
+    user = serializers.ReadOnlyField(source=User.email, read_only=True)
     class Meta:
         model = LocationLog
-        fields = ('id', 'url', 'area')
+        fields = ('id', 'url', 'area', 'user')

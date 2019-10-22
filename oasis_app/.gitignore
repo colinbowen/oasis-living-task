@@ -48,9 +48,6 @@ coverage.xml
 *.cover 
 .hypothesis/ 
 
-# Jupyter Notebook 
-.ipynb_checkpoints 
-
 # pyenv 
 .python-version 
 
@@ -99,3 +96,5 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+.DS_Store
