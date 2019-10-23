@@ -5,6 +5,7 @@ from .serializers import NoteSerializer, LocationSerializer, UserSerializer
 from django.contrib.auth.models import User
 
 # Create your views here.
+# @api_view([''])
 
 # ViewSets define the view behavior.
 class UserView(viewsets.ModelViewSet):
