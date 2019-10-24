@@ -1,0 +1,1 @@
+web: gunicorn oasis_app.wsgi --log-file -
