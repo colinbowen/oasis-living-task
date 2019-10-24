@@ -25,7 +25,7 @@ SECRET_KEY = 's7^!nacm-3a@(ulj7=qv2@ek$i6!l7=pa+wt4ls3g8ss6s8yg%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["now.sh", 'localhost', '127.0.0.1', 'oasis-app.colinbowen.now.sh']
+ALLOWED_HOSTS = ["now.sh", 'localhost', '127.0.0.1', 'oasis-app.colinbowen.now.sh', 'oasis-notes.herokuapp.com/']
 
 
 # Application definition
