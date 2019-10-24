@@ -6,13 +6,13 @@ from django.contrib.auth.models import User
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'is_staff']
+        fields = ['id', 'url', 'username', 'email', 'is_staff']
 
 
 class NoteSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Note
-        fields = ('url', 'user', 'title', 'text')
+        fields = ('id', 'url', 'user', 'title', 'text')
 
 
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
