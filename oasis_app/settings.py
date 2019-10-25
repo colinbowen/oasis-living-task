@@ -133,6 +133,8 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 SITE_ID = 1
 
 # restframework
@@ -151,4 +153,4 @@ REST_FRAMEWORK = {
 }
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
