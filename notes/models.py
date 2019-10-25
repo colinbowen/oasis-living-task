@@ -22,10 +22,9 @@ class Note(models.Model):
 
 
 class LocationLog(models.Model):
-    area = models.CharField(max_length=100)
-    timestamp = models.CharField(max_length=100)
+    coords = models.CharField(max_length=1000)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.area, self.timestamp
+        return self.coords, self.user
 

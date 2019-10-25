@@ -18,4 +18,4 @@ class NoteSerializer(serializers.HyperlinkedModelSerializer):
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = LocationLog
-        fields = ('id', 'user', 'url', 'area')
+        fields = ('id', 'user', 'url', 'coords')
